@@ -23,7 +23,7 @@ def search_engine(eng, i, j, found_nums):
     return eng, found_nums
 
 # Open the file and create a 2D array of the engine
-with open('input1.txt', 'r') as file_input:
+with open('input2.txt', 'r') as file_input:
 
     lines = file_input.readlines()
     for line in lines:

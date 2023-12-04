@@ -21,7 +21,7 @@ def search_engine(eng, i, j, eng_sum):
 
     return eng, eng_sum
 
-with open('input1.txt', 'r') as file_input:
+with open('input2.txt', 'r') as file_input:
 
     lines = file_input.readlines()
     for line in lines:

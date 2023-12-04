@@ -7,25 +7,27 @@ with open('input2.txt', 'r') as file_input:
 
         line = line.strip().split(':')
 
+        # Grab the game number, and the bag sets associated with that game
         game_number = int(line[0].split(' ')[1])
-        parsed_game = line[1].strip().split(';')
+        bag_set = line[1].strip().split(';')
 
         max_red = 0
         max_green = 0
         max_blue = 0
 
-        for game in parsed_game:
+        # Loop through each bag, check if there are new max values for red, green, or blue.
+        for bag in bag_set:
 
             current_max_red = 0
             current_max_green = 0
             current_max_blue = 0
 
-            game = game.strip().split(' ')
+            bag = bag.strip().split(' ')
             
-            for i in range(0, len(game), 2):
+            for i in range(0, len(bag), 2):
             
-                cube_quantity = int(game[i])
-                cube_color = game[i+1]
+                cube_quantity = int(bag[i])
+                cube_color = bag[i+1]
                 if cube_color[-1] == ',':
                     cube_color = cube_color[:-1]
                 
